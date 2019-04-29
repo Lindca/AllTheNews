@@ -71,7 +71,7 @@ mongoose.connect(MONGODB_URI);
 
 ### Tips
 
-* Go back to Saturday's activities if you need a refresher on how to partner one model with another.
+* Go back to Saturday's activities if you need a refresher on how to partner one model with  another.
 
 * Whenever you scrape a site for stories, make sure an article isn't already represented in your database before saving it; Do not save any duplicate entries.
 
