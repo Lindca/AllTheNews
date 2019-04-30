@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Scrape Me</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    {{#each article}}
+    <div class="jumbotron jumbotron-fluid p-1 my-1 rounded-0">
+        <div class="container">
+            <h2><a href="{{url}}">{{title}}</a> (Click me!)</h2>
+            <div>
+                {{#each note}}
+                <div>
+                    <p>{{note}}</p>
+                </div>
+                {{/each}}
+                <form id="note">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Write Note</label>
+                        <textarea class="form-control" id="textArea" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <button  id="{{_id}}-add" class="btn btn-primary">Add Note</button>
+            <button id="{{_id}}-delete" class="btn btn-primary">Delete Note</button>
+        </div>
+    </div>
+    {{/each}}
+</div>
